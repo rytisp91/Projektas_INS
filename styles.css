@@ -1,0 +1,264 @@
+/* Bendras stilius */
+html,
+body {
+    height: 100%;
+    /* Nustato html ir body aukštį iki 100% */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #666666;
+    display: flex;
+    flex-direction: column;
+    /* Panaudoja flexbox, kad konteineris būtų stulpelio orientacijos */
+    min-height: 100%;
+    /* Užtikrina, kad body užimtų bent visą lango aukštį */
+}
+
+/* Headerio stiliai */
+header {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Antraščių stiliai */
+h1,
+h2,
+h3 {
+    color: #333333;
+    text-align: center;
+}
+
+/* Pagrindinio turinio stiliai */
+main {
+    flex: 1;
+    /* Užpildo visas laisvas vietoves tarp header ir footer */
+    padding: 20px;
+    /* Atstumas tarp turinio ir kraštų */
+}
+
+/* Footerio stiliai */
+footer {
+    text-align: center;
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Artikelio turinio stiliai */
+.article-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+/* Artikelio pavadinimo stiliai */
+.article-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Artikelio paveikslėlio stiliai */
+.article-content img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Artikelio paveikslėlio pritraukimo stiliai */
+.article-content img.zoomed {
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+}
+
+/* Navigacijos meniu stiliai */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* Bendro konteinerio stiliai */
+.form-container,
+.registration-container {
+    max-width: 360px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Formų grupės stiliai */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Įvesties lauko stiliai */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="hidden"],
+button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Mygtuko stiliai */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Artikelio stiliai */
+.article {
+    width: 29%;
+    margin: 1%;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.article:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Prisitaikymas kitiems įrenginiams */
+@media (max-width: 1000px) {
+    .article {
+        width: 48%;
+    }
+}
+
+@media (max-width: 600px) {
+    .article {
+        width: 100%;
+    }
+}
+
+/* Bendro konteinerio stiliai */
+.container {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Admino panelės stiliai */
+.centering{
+    display: flex;
+    justify-content: center;
+}
+
+.admin-container {
+    width: 960px;
+    margin: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-form-group {
+    margin-bottom: 20px;
+}
+
+.admin-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.admin-input,
+.admin-textarea,
+.admin-select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.admin-textarea {
+    height: 250px;
+}
+
+.admin-button {
+    width: auto;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.admin-back-button:hover {
+    background-color: #5a6268;
+}
